@@ -3,6 +3,9 @@ import { NextPage } from "next";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
+import CollectionsBookmarkTwoToneIcon from '@mui/icons-material/CollectionsBookmarkTwoTone';
+import SupportAgentTwoToneIcon from '@mui/icons-material/SupportAgentTwoTone';
+import LightbulbTwoToneIcon from '@mui/icons-material/LightbulbTwoTone';
 
 const Home: NextPage = () => {
 
@@ -20,10 +23,64 @@ const Home: NextPage = () => {
                 variant="contained"
                 color="primary"
                 onClick={handleClick}
-                sx={{ width: "50%", height: "4rem", fontSize: "1.2rem" }}
+                 sx={{ 
+                  margin: '0 4px',
+                  background: '#1c1c1f',
+                  color:'white',
+                  flexDirection: 'column', 
+                  alignItems: 'flex-start',    
+                  textAlign: 'center',  
+                  width: '200px',
+                  padding: '8px',
+                  textTransform: 'none'
+                }}
               >
-                Some other Button
+                <CollectionsBookmarkTwoToneIcon />
+                Knowledge Base
               </Button>
+
+             <Button
+                variant="contained"
+                color="primary"
+                href= "home/tickets"
+                sx={{ 
+                  margin: '0 4px',
+                  background: '#1c1c1f',
+                  color:'white',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  textAlign: 'center',
+                  width: '200px',
+                  padding: '8px',
+                  textTransform: 'none'
+                }}
+             >
+                <SupportAgentTwoToneIcon />
+                Tickets
+             </Button>
+
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleClick}
+                sx={{ 
+                  margin: '0 4px',
+                  background: '#1c1c1f',
+                  color:'white',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  textAlign: 'center',
+                  width: '200px',
+                  padding: '8px',
+                  textTransform: 'none'
+                }}
+              >
+                <LightbulbTwoToneIcon />
+                FAQ
+              </Button>
+
+
+
             </Box>
           </Grid>
         </Grid>
