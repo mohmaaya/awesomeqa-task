@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\app",
+    "\\backend\\app\\repositories",
+    "\\frontend",
+    "\\frontend\\pages",
+    "\\frontend\\pages\\home",
+    "\\frontend\\pages\\home\\tickets",
+    "\\frontend\\pages\\HTTPTickets",
+    "\\frontend\\pages\\types"
+  ],
+  "SelectedNode": "\\frontend\\pages\\types\\ticketMapper.tsx",
+  "PreviewInSolutionExplorer": false
+}

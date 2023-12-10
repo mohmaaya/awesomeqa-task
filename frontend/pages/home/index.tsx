@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                 href= "home/tickets"
                 sx={buttonStyles}
              >
-                <SupportAgentTwoToneIcon /> // Icon for the Tickets. Used from MUI-Icons
+                <SupportAgentTwoToneIcon /> 
                 Tickets
              </Button>
 

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NextPage } from "next";
 import { useState, useEffect, Fragment } from "react";
-import { TicketHttpService } from "../../HTTPTickets/tickets.service";
-import { Ticket } from "../../types/ticket";
+import { TicketHttpService } from "../../../HTTPTickets/tickets.service";
+import { Ticket } from "../../../types/ticket";
 import Pagination from '@mui/material/Pagination';
 import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 import FilterAndSortComponent from "../FilterAndSortComponent";

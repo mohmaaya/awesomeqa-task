@@ -4,8 +4,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { Ticket } from "../types/ticket";
-import { TicketHttpService } from "../HTTPTickets/tickets.service";
+import { Ticket } from "../../types/ticket";
+import { TicketHttpService } from "../../HTTPTickets/tickets.service";
 
 interface FilterSortComponentProps {
     onFilter: (chosenTickets: Ticket[], chosenTicketsType: string) => void;
