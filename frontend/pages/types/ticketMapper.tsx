@@ -1,4 +1,4 @@
-import { Ticket, TicketDTO } from "../types/types";
+import { Ticket, TicketDTO } from "../types/ticket";
 
 export default class StartupMapper {
     public static map(ticket: TicketDTO): Ticket {

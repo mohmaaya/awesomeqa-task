@@ -58,10 +58,6 @@ async def update_ticket_status(
     status = request_body.get("status")
     ticket_window = request_body.get("ticket_window")
 
-    print(status)
-    print(ticket_window)
-    print(id)
-
     if status is None:
         raise HTTPException(status_code=400, error="Status is not provided")
 
@@ -76,7 +72,7 @@ async def update_ticket_status(
             tickets = ticket_repository.get_tickets()
         elif ticket_window == 'Open':
             tickets = ticket_repository.get_open_tickets()
-        elif ticket_window == 'Closed':
+        else:
             tickets = ticket_repository.get_closed_tickets()
 
     return JSONResponse(tickets, status_code=200)

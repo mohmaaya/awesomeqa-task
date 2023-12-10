@@ -1,6 +1,6 @@
 import axios from 'axios';
 import ticketMapper from '../types/ticketMapper';
-import { Ticket, TicketDTO } from "../types/types"
+import { Ticket, TicketDTO } from "../types/ticket"
 
 export class TicketHttpService {
     

@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { Dropdown } from '@mui/base/Dropdown';
-import { Menu } from '@mui/base/Menu';
-import { MenuButton as BaseMenuButton, MenuButton } from '@mui/base/MenuButton';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { Ticket } from "../types/types";
+import { Ticket } from "../types/ticket";
 import { TicketHttpService } from "../HTTPTickets/tickets.service";
 
 interface FilterSortComponentProps {
@@ -55,24 +52,23 @@ const FilterAndSortComponent: React.FC<FilterSortComponentProps> = ({
 
     
 
-    const handleChange = (event: SelectChangeEvent) => {
+    const handleSortTickets = (event: SelectChangeEvent) => {
 
         const value = event.target.value;
         if (value == "asc") {
-            setSort(value);
             tickets.sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
         }
         else {
-            setSort(value);
             tickets.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
         }
        
+        setSort(value);
         onSort(tickets);
     };
 
     return (
         <>
-            <Box sx={{ minWidth: 120 }}>
+            <Box>
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Filter Tickets</InputLabel>
                     <Select
@@ -88,17 +84,15 @@ const FilterAndSortComponent: React.FC<FilterSortComponentProps> = ({
 
                     </Select>
                 </FormControl>
-            </Box>
-
-            <Box sx={{ minWidth: 120 }}>
-                <FormControl fullWidth>
+            
+                <FormControl fullWidth sx={{ marginTop: '15px' }}>
                     <InputLabel id="demo-simple-select-label">Sort Tickets</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={sort}
                         label="Sort"
-                        onChange={handleChange}
+                        onChange={handleSortTickets}
                     >
                         <MenuItem value={"asc"}>Oldest to Newest </MenuItem>
                         <MenuItem value={"desc"}>Newest to Oldest </MenuItem>

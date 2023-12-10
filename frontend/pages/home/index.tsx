@@ -11,7 +11,19 @@ const Home: NextPage = () => {
 
   const handleClick = async () => {
     console.log("clicked");
-  };
+    };
+
+    const buttonStyles = {
+        margin: '0 4px',
+        background: '#1c1c1f',
+        color: 'white',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        textAlign: 'center',
+        width: '200px',
+        padding: '8px',
+        textTransform: 'none',
+    };
 
   return (
     <>
@@ -23,17 +35,7 @@ const Home: NextPage = () => {
                 variant="contained"
                 color="primary"
                 onClick={handleClick}
-                 sx={{ 
-                  margin: '0 4px',
-                  background: '#1c1c1f',
-                  color:'white',
-                  flexDirection: 'column', 
-                  alignItems: 'flex-start',    
-                  textAlign: 'center',  
-                  width: '200px',
-                  padding: '8px',
-                  textTransform: 'none'
-                }}
+                sx={buttonStyles}
               >
                 <CollectionsBookmarkTwoToneIcon />
                 Knowledge Base
@@ -43,19 +45,9 @@ const Home: NextPage = () => {
                 variant="contained"
                 color="primary"
                 href= "home/tickets"
-                sx={{ 
-                  margin: '0 4px',
-                  background: '#1c1c1f',
-                  color:'white',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  textAlign: 'center',
-                  width: '200px',
-                  padding: '8px',
-                  textTransform: 'none'
-                }}
+                sx={buttonStyles}
              >
-                <SupportAgentTwoToneIcon />
+                <SupportAgentTwoToneIcon /> // Icon for the Tickets. Used from MUI-Icons
                 Tickets
              </Button>
 
@@ -63,17 +55,7 @@ const Home: NextPage = () => {
                 variant="contained"
                 color="primary"
                 onClick={handleClick}
-                sx={{ 
-                  margin: '0 4px',
-                  background: '#1c1c1f',
-                  color:'white',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  textAlign: 'center',
-                  width: '200px',
-                  padding: '8px',
-                  textTransform: 'none'
-                }}
+                sx={buttonStyles}
               >
                 <LightbulbTwoToneIcon />
                 FAQ
